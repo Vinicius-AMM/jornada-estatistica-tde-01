@@ -1,0 +1,5685 @@
+{
+  "projeto": {
+    "titulo": "Dashboard Estatística - Censo Escolar 2024",
+    "disciplina": "Estatística Básica / Análise Exploratória de Dados",
+    "instituicao": "INEP / MEC",
+    "data_geracao": "04/09/2026 12:40:07"
+  },
+  "prioridade5_identificacao": {
+    "nome_arquivo": "microdados_ed_basica_2024.csv",
+    "caminho_completo": "Base de dados/microdados_censo_escolar_2024_defeso/dados/microdados_ed_basica_2024.csv",
+    "tamanho_bytes": 217925280,
+    "tamanho_mb": 207.83,
+    "total_linhas": 215545,
+    "total_colunas": 426,
+    "delimitador": "; (Ponto e vírgula)",
+    "encoding": "ISO-8859-1 (latin1)",
+    "md5_oficial": "04D691FE6D8D744DE65F21ED65068AD6",
+    "md5_calculado": "04D691FE6D8D744DE65F21ED65068AD6",
+    "md5_valido": true,
+    "status_integridade": "Arquivo íntegro e autêntico verificado por Hash MD5 oficial"
+  },
+  "prioridade2_contagem": {
+    "total_variaveis": 426,
+    "distribuicao_prefixos": [
+      {
+        "prefixo": "IN",
+        "quantidade": 220,
+        "percentual": 51.64,
+        "tipo": "Qualitativa Binária (Dummy)",
+        "descricao": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)"
+      },
+      {
+        "prefixo": "QT",
+        "quantidade": 154,
+        "percentual": 36.15,
+        "tipo": "Quantitativa Discreta",
+        "descricao": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)"
+      },
+      {
+        "prefixo": "CO",
+        "quantidade": 16,
+        "percentual": 3.76,
+        "tipo": "Qualitativa Nominal",
+        "descricao": "Código identificador numérico (MEC, IBGE, UF, Município)"
+      },
+      {
+        "prefixo": "TP",
+        "quantidade": 15,
+        "percentual": 3.52,
+        "tipo": "Qualitativa Categórica / Ordinal",
+        "descricao": "Tipo ou classificação administrativa/estrutural"
+      },
+      {
+        "prefixo": "NO",
+        "quantidade": 10,
+        "percentual": 2.35,
+        "tipo": "Qualitativa Nominal",
+        "descricao": "Nome descritivo textual (escola, município, estado)"
+      },
+      {
+        "prefixo": "NU",
+        "quantidade": 6,
+        "percentual": 1.41,
+        "tipo": "Identificador Cadastral / Temporal",
+        "descricao": "Número de registro, endereço, telefone, CNPJ ou Ano"
+      },
+      {
+        "prefixo": "DS",
+        "quantidade": 2,
+        "percentual": 0.47,
+        "tipo": "Qualitativa Descritiva",
+        "descricao": "Descrição textual de endereço ou detalhe cadastral"
+      },
+      {
+        "prefixo": "DT",
+        "quantidade": 2,
+        "percentual": 0.47,
+        "tipo": "Temporal / Data",
+        "descricao": "Data de ocorrência, início ou encerramento"
+      },
+      {
+        "prefixo": "SG",
+        "quantidade": 1,
+        "percentual": 0.23,
+        "tipo": "Qualitativa Nominal",
+        "descricao": "Sigla de Unidade Federativa ou órgão"
+      }
+    ],
+    "primeiras_10": [
+      "NU_ANO_CENSO",
+      "NO_REGIAO",
+      "CO_REGIAO",
+      "NO_UF",
+      "SG_UF",
+      "CO_UF",
+      "NO_MUNICIPIO",
+      "CO_MUNICIPIO",
+      "NO_REGIAO_GEOG_INTERM",
+      "CO_REGIAO_GEOG_INTERM"
+    ],
+    "ultimas_10": [
+      "QT_TUR_BAS_D",
+      "QT_TUR_BAS_N",
+      "QT_TUR_BAS_EAD",
+      "QT_TUR_INF_INT",
+      "QT_TUR_INF_CRE_INT",
+      "QT_TUR_INF_PRE_INT",
+      "QT_TUR_FUND_INT",
+      "QT_TUR_FUND_AI_INT",
+      "QT_TUR_FUND_AF_INT",
+      "QT_TUR_MED_INT"
+    ]
+  },
+  "prioridade3_quantitativas": {
+    "total_quantitativas_discretas": 154,
+    "total_quantitativa_temporal": 1,
+    "total_geral_quantitativas": 155,
+    "percentual_quantitativas": 36.38,
+    "variaveis_qt_lista": [
+      "QT_SALAS_UTILIZADAS_DENTRO",
+      "QT_SALAS_UTILIZADAS_FORA",
+      "QT_SALAS_UTILIZADAS",
+      "QT_SALAS_UTILIZA_CLIMATIZADAS",
+      "QT_SALAS_UTILIZADAS_ACESSIVEIS",
+      "QT_EQUIP_DVD",
+      "QT_EQUIP_SOM",
+      "QT_EQUIP_TV",
+      "QT_EQUIP_LOUSA_DIGITAL",
+      "QT_EQUIP_MULTIMIDIA",
+      "QT_DESKTOP_ALUNO",
+      "QT_COMP_PORTATIL_ALUNO",
+      "QT_TABLET_ALUNO",
+      "QT_PROF_ADMINISTRATIVOS",
+      "QT_PROF_SERVICOS_GERAIS",
+      "QT_PROF_BIBLIOTECARIO",
+      "QT_PROF_SAUDE",
+      "QT_PROF_COORDENADOR",
+      "QT_PROF_FONAUDIOLOGO",
+      "QT_PROF_NUTRICIONISTA",
+      "QT_PROF_PSICOLOGO",
+      "QT_PROF_ALIMENTACAO",
+      "QT_PROF_PEDAGOGIA",
+      "QT_PROF_SECRETARIO",
+      "QT_PROF_SEGURANCA",
+      "QT_PROF_MONITORES",
+      "QT_PROF_GESTAO",
+      "QT_PROF_ASSIST_SOCIAL",
+      "QT_PROF_TRAD_LIBRAS",
+      "QT_PROF_AGRICOLA",
+      "QT_PROF_REVISOR_BRAILLE",
+      "QT_MAT_BAS",
+      "QT_MAT_INF",
+      "QT_MAT_INF_CRE",
+      "QT_MAT_INF_PRE",
+      "QT_MAT_FUND",
+      "QT_MAT_FUND_AI",
+      "QT_MAT_FUND_AI_1",
+      "QT_MAT_FUND_AI_2",
+      "QT_MAT_FUND_AI_3",
+      "QT_MAT_FUND_AI_4",
+      "QT_MAT_FUND_AI_5",
+      "QT_MAT_FUND_AF",
+      "QT_MAT_FUND_AF_6",
+      "QT_MAT_FUND_AF_7",
+      "QT_MAT_FUND_AF_8",
+      "QT_MAT_FUND_AF_9",
+      "QT_MAT_MED",
+      "QT_MAT_MED_PROP",
+      "QT_MAT_MED_PROP_1",
+      "QT_MAT_MED_PROP_2",
+      "QT_MAT_MED_PROP_3",
+      "QT_MAT_MED_PROP_4",
+      "QT_MAT_MED_PROP_NS",
+      "QT_MAT_MED_CT",
+      "QT_MAT_MED_CT_1",
+      "QT_MAT_MED_CT_2",
+      "QT_MAT_MED_CT_3",
+      "QT_MAT_MED_CT_4",
+      "QT_MAT_MED_CT_NS",
+      "QT_MAT_MED_NM",
+      "QT_MAT_MED_NM_1",
+      "QT_MAT_MED_NM_2",
+      "QT_MAT_MED_NM_3",
+      "QT_MAT_MED_NM_4",
+      "QT_MAT_PROF",
+      "QT_MAT_PROF_TEC",
+      "QT_MAT_PROF_TEC_CONC",
+      "QT_MAT_PROF_TEC_SUBS",
+      "QT_MAT_PROF_FIC_CONC",
+      "QT_MAT_EJA",
+      "QT_MAT_EJA_FUND",
+      "QT_MAT_EJA_FUND_AI",
+      "QT_MAT_EJA_FUND_AF",
+      "QT_MAT_EJA_FUND_FIC",
+      "QT_MAT_EJA_MED",
+      "QT_MAT_EJA_MED_NPROF",
+      "QT_MAT_EJA_MED_FIC",
+      "QT_MAT_EJA_MED_TEC",
+      "QT_MAT_ESP",
+      "QT_MAT_ESP_CC",
+      "QT_MAT_ESP_CE",
+      "QT_MAT_BAS_FEM",
+      "QT_MAT_BAS_MASC",
+      "QT_MAT_BAS_ND",
+      "QT_MAT_BAS_BRANCA",
+      "QT_MAT_BAS_PRETA",
+      "QT_MAT_BAS_PARDA",
+      "QT_MAT_BAS_AMARELA",
+      "QT_MAT_BAS_INDIGENA",
+      "QT_MAT_BAS_0_3",
+      "QT_MAT_BAS_4_5",
+      "QT_MAT_BAS_6_10",
+      "QT_MAT_BAS_11_14",
+      "QT_MAT_BAS_15_17",
+      "QT_MAT_BAS_18_MAIS",
+      "QT_MAT_BAS_D",
+      "QT_MAT_BAS_N",
+      "QT_MAT_BAS_EAD",
+      "QT_MAT_INF_INT",
+      "QT_MAT_INF_CRE_INT",
+      "QT_MAT_INF_PRE_INT",
+      "QT_MAT_FUND_INT",
+      "QT_MAT_FUND_AI_INT",
+      "QT_MAT_FUND_AF_INT",
+      "QT_MAT_MED_INT",
+      "QT_MAT_ZR_URB",
+      "QT_MAT_ZR_RUR",
+      "QT_MAT_ZR_NA",
+      "QT_TRANSP_PUBLICO",
+      "QT_TRANSP_RESP_EST",
+      "QT_TRANSP_RESP_MUN",
+      "QT_DOC_BAS",
+      "QT_DOC_INF",
+      "QT_DOC_INF_CRE",
+      "QT_DOC_INF_PRE",
+      "QT_DOC_FUND",
+      "QT_DOC_FUND_AI",
+      "QT_DOC_FUND_AF",
+      "QT_DOC_MED",
+      "QT_DOC_PROF",
+      "QT_DOC_PROF_TEC",
+      "QT_DOC_EJA",
+      "QT_DOC_EJA_FUND",
+      "QT_DOC_EJA_MED",
+      "QT_DOC_ESP",
+      "QT_DOC_ESP_CC",
+      "QT_DOC_ESP_CE",
+      "QT_TUR_BAS",
+      "QT_TUR_INF",
+      "QT_TUR_INF_CRE",
+      "QT_TUR_INF_PRE",
+      "QT_TUR_FUND",
+      "QT_TUR_FUND_AI",
+      "QT_TUR_FUND_AF",
+      "QT_TUR_MED",
+      "QT_TUR_PROF",
+      "QT_TUR_PROF_TEC",
+      "QT_TUR_EJA",
+      "QT_TUR_EJA_FUND",
+      "QT_TUR_EJA_MED",
+      "QT_TUR_ESP",
+      "QT_TUR_ESP_CC",
+      "QT_TUR_ESP_CE",
+      "QT_TUR_BAS_D",
+      "QT_TUR_BAS_N",
+      "QT_TUR_BAS_EAD",
+      "QT_TUR_INF_INT",
+      "QT_TUR_INF_CRE_INT",
+      "QT_TUR_INF_PRE_INT",
+      "QT_TUR_FUND_INT",
+      "QT_TUR_FUND_AI_INT",
+      "QT_TUR_FUND_AF_INT",
+      "QT_TUR_MED_INT"
+    ],
+    "variavel_ano": [
+      "NU_ANO_CENSO"
+    ],
+    "grupos_quantitativas": {
+      "Matrículas (Alunos)": {
+        "quantidade": 79,
+        "exemplos": [
+          "QT_SALAS_UTILIZA_CLIMATIZADAS",
+          "QT_MAT_BAS",
+          "QT_MAT_INF",
+          "QT_MAT_INF_CRE",
+          "QT_MAT_INF_PRE"
+        ]
+      },
+      "Docentes (Professores)": {
+        "quantidade": 16,
+        "exemplos": [
+          "QT_DOC_BAS",
+          "QT_DOC_INF",
+          "QT_DOC_INF_CRE",
+          "QT_DOC_INF_PRE",
+          "QT_DOC_FUND"
+        ]
+      },
+      "Turmas": {
+        "quantidade": 26,
+        "exemplos": [
+          "QT_TUR_BAS",
+          "QT_TUR_INF",
+          "QT_TUR_INF_CRE",
+          "QT_TUR_INF_PRE",
+          "QT_TUR_FUND"
+        ]
+      },
+      "Infraestrutura e Salas": {
+        "quantidade": 33,
+        "exemplos": [
+          "QT_SALAS_UTILIZADAS_DENTRO",
+          "QT_SALAS_UTILIZADAS_FORA",
+          "QT_SALAS_UTILIZADAS",
+          "QT_SALAS_UTILIZADAS_ACESSIVEIS",
+          "QT_EQUIP_DVD"
+        ]
+      }
+    },
+    "resumo_categorias_estatisticas": {
+      "Quantitativas Discretas (QT_)": 154,
+      "Quantitativa Temporal (NU_ANO_CENSO)": 1,
+      "Qualitativas Binárias / Dummies (IN_)": 220,
+      "Qualitativas Categóricas / Tipos (TP_)": 15,
+      "Códigos Identificadores (CO_)": 16,
+      "Nomes Descritivos (NO_)": 10,
+      "Cadastrais / Outras (NU, DS, DT, SG)": 10
+    },
+    "estatisticas_descritivas": {
+      "QT_MAT_BAS": {
+        "variavel": "QT_MAT_BAS",
+        "rotulo": "Matrículas da Educação Básica",
+        "descricao": "Número total de alunos matriculados na unidade escolar",
+        "unidade": "alunos",
+        "validos": 179286,
+        "ausentes": 36259,
+        "pct_ausente": 16.82,
+        "pct_preenchido": 83.18,
+        "media": 262.65,
+        "mediana": 162.0,
+        "desvio_padrao": 326.39,
+        "coef_variacao": 124.27,
+        "minimo": 1.0,
+        "maximo": 36822.0,
+        "q1": 69.0,
+        "q3": 348.0,
+        "iqr": 279.0,
+        "soma_total": 47088922,
+        "interpretacao": "Distribuição com acentuada assimetria à direita (Média de 262,65 é 62,1% superior à Mediana de 162,00). Metade das escolas brasileiras possui até 162 alunos, porém grandes complexos escolares (com até 36.822 alunos) deslocam a média para cima."
+      },
+      "QT_DOC_BAS": {
+        "variavel": "QT_DOC_BAS",
+        "rotulo": "Docentes da Educação Básica",
+        "descricao": "Total de professores/docentes atuantes na escola",
+        "unidade": "docentes",
+        "validos": 178997,
+        "ausentes": 36548,
+        "pct_ausente": 16.96,
+        "pct_preenchido": 83.04,
+        "media": 16.42,
+        "mediana": 12.0,
+        "desvio_padrao": 15.02,
+        "coef_variacao": 91.47,
+        "minimo": 1.0,
+        "maximo": 345.0,
+        "q1": 6.0,
+        "q3": 22.0,
+        "iqr": 16.0,
+        "soma_total": 2939002,
+        "interpretacao": "Média de 16,42 e mediana de 12,00 professores por escola. 50% das escolas contam com até 12 docentes, concentrando-se a maioria no intervalo interquartil entre 6 e 22 docentes (IQR = 16)."
+      },
+      "QT_TUR_BAS": {
+        "variavel": "QT_TUR_BAS",
+        "rotulo": "Turmas da Educação Básica",
+        "descricao": "Total de turmas em funcionamento na escola",
+        "unidade": "turmas",
+        "validos": 179286,
+        "ausentes": 36259,
+        "pct_ausente": 16.82,
+        "pct_preenchido": 83.18,
+        "media": 12.41,
+        "mediana": 10.0,
+        "desvio_padrao": 10.67,
+        "coef_variacao": 85.98,
+        "minimo": 1.0,
+        "maximo": 660.0,
+        "q1": 5.0,
+        "q3": 16.0,
+        "iqr": 11.0,
+        "soma_total": 2224054,
+        "interpretacao": "Média de 12,41 turmas e mediana de 10,00 turmas por escola. Apresenta comportamento regular com desvio padrão de 10,67 e 50% das unidades atendendo entre 5 e 16 turmas ativas."
+      }
+    }
+  },
+  "prioridade4_ausencias": {
+    "total_analisadas": 21,
+    "todas_abaixo_50": true,
+    "maior_ausencia_pct": 22.63,
+    "tabela_variaveis": [
+      {
+        "variavel": "IN_BANDA_LARGA",
+        "ausentes": 48774,
+        "preenchidos": 166771,
+        "percentual_ausente": 22.63,
+        "percentual_preenchido": 77.37,
+        "cumpre_criterio": true,
+        "categoria": "Infraestrutura Básica (IN)"
+      },
+      {
+        "variavel": "QT_DOC_BAS",
+        "ausentes": 36548,
+        "preenchidos": 178997,
+        "percentual_ausente": 16.96,
+        "percentual_preenchido": 83.04,
+        "cumpre_criterio": true,
+        "categoria": "Métrica de Ensino (QT)"
+      },
+      {
+        "variavel": "QT_MAT_BAS",
+        "ausentes": 36259,
+        "preenchidos": 179286,
+        "percentual_ausente": 16.82,
+        "percentual_preenchido": 83.18,
+        "cumpre_criterio": true,
+        "categoria": "Métrica de Ensino (QT)"
+      },
+      {
+        "variavel": "QT_TUR_BAS",
+        "ausentes": 36259,
+        "preenchidos": 179286,
+        "percentual_ausente": 16.82,
+        "percentual_preenchido": 83.18,
+        "cumpre_criterio": true,
+        "categoria": "Métrica de Ensino (QT)"
+      },
+      {
+        "variavel": "IN_AGUA_POTAVEL",
+        "ausentes": 34480,
+        "preenchidos": 181065,
+        "percentual_ausente": 16.0,
+        "percentual_preenchido": 84.0,
+        "cumpre_criterio": true,
+        "categoria": "Infraestrutura Básica (IN)"
+      },
+      {
+        "variavel": "IN_ENERGIA_INEXISTENTE",
+        "ausentes": 34480,
+        "preenchidos": 181065,
+        "percentual_ausente": 16.0,
+        "percentual_preenchido": 84.0,
+        "cumpre_criterio": true,
+        "categoria": "Infraestrutura Básica (IN)"
+      },
+      {
+        "variavel": "IN_ESGOTO_INEXISTENTE",
+        "ausentes": 34480,
+        "preenchidos": 181065,
+        "percentual_ausente": 16.0,
+        "percentual_preenchido": 84.0,
+        "cumpre_criterio": true,
+        "categoria": "Infraestrutura Básica (IN)"
+      },
+      {
+        "variavel": "IN_INTERNET",
+        "ausentes": 34480,
+        "preenchidos": 181065,
+        "percentual_ausente": 16.0,
+        "percentual_preenchido": 84.0,
+        "cumpre_criterio": true,
+        "categoria": "Infraestrutura Básica (IN)"
+      },
+      {
+        "variavel": "NU_ANO_CENSO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "CO_ENTIDADE",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "NO_ENTIDADE",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "CO_UF",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "SG_UF",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "NO_UF",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "CO_MUNICIPIO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "NO_MUNICIPIO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "CO_REGIAO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "NO_REGIAO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Geográfica / Cadastral"
+      },
+      {
+        "variavel": "TP_SITUACAO_FUNCIONAMENTO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Estrutura Administrativa"
+      },
+      {
+        "variavel": "TP_DEPENDENCIA",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Estrutura Administrativa"
+      },
+      {
+        "variavel": "TP_LOCALIZACAO",
+        "ausentes": 0,
+        "preenchidos": 215545,
+        "percentual_ausente": 0.0,
+        "percentual_preenchido": 100.0,
+        "cumpre_criterio": true,
+        "categoria": "Estrutura Administrativa"
+      }
+    ],
+    "confirmacao_banda_larga": {
+      "variavel": "IN_BANDA_LARGA",
+      "ausentes": 48774,
+      "preenchidos": 166771,
+      "percentual_ausente": 22.63,
+      "percentual_preenchido": 77.37,
+      "cumpre_criterio": true,
+      "status": "Confirmado e Aprovado",
+      "detalhe": "O percentual de 22,63% registrado no relatório está rigorosamente correto. Corresponde a 48.774 registros ausentes entre as 215.545 entidades, decorrente de escolas paralisadas/extintas (16,82%) e escolas ativas que não contam com conexão de internet banda larga (~5,81%). Está amplamente abaixo do limite de 50% de ausência tolerada."
+    },
+    "diagnostico": {
+      "conclusao": "Aprovado: Nenhuma variável central ultrapassa 50% de valores ausentes.",
+      "motivo_ausencias_parciais": "As ausências em torno de 16,8% observadas em QT_MAT_BAS, QT_DOC_BAS, QT_TUR_BAS e variáveis de infraestrutura referem-se estritamente a entidades escolares em situação paralisada ou extinta no ano do Censo (2024).",
+      "variaveis_completas": "Todas as variáveis cadastrais, geográficas e identificadoras possuem 100% de preenchimento (0.00% ausentes)."
+    }
+  },
+  "explorador_variaveis": {
+    "total_colunas": 426,
+    "colunas": [
+      {
+        "ordem": 1,
+        "nome": "NU_ANO_CENSO",
+        "prefixo": "NU",
+        "tipo_estatistico": "Quantitativa Temporal (Ano)",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Ano civil de referência da coleta do Censo Escolar",
+        "amostras": [
+          "2024"
+        ]
+      },
+      {
+        "ordem": 2,
+        "nome": "NO_REGIAO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Norte"
+        ]
+      },
+      {
+        "ordem": 3,
+        "nome": "CO_REGIAO",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "1"
+        ]
+      },
+      {
+        "ordem": 4,
+        "nome": "NO_UF",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Rondônia"
+        ]
+      },
+      {
+        "ordem": 5,
+        "nome": "SG_UF",
+        "prefixo": "SG",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Sigla de Unidade Federativa ou órgão",
+        "amostras": [
+          "RO"
+        ]
+      },
+      {
+        "ordem": 6,
+        "nome": "CO_UF",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "11"
+        ]
+      },
+      {
+        "ordem": 7,
+        "nome": "NO_MUNICIPIO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Alta Floresta D'Oeste"
+        ]
+      },
+      {
+        "ordem": 8,
+        "nome": "CO_MUNICIPIO",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "1100015"
+        ]
+      },
+      {
+        "ordem": 9,
+        "nome": "NO_REGIAO_GEOG_INTERM",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Ji-Paraná"
+        ]
+      },
+      {
+        "ordem": 10,
+        "nome": "CO_REGIAO_GEOG_INTERM",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "1102"
+        ]
+      },
+      {
+        "ordem": 11,
+        "nome": "NO_REGIAO_GEOG_IMED",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Cacoal"
+        ]
+      },
+      {
+        "ordem": 12,
+        "nome": "CO_REGIAO_GEOG_IMED",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "110005"
+        ]
+      },
+      {
+        "ordem": 13,
+        "nome": "NO_MESORREGIAO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Leste Rondoniense"
+        ]
+      },
+      {
+        "ordem": 14,
+        "nome": "CO_MESORREGIAO",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "2"
+        ]
+      },
+      {
+        "ordem": 15,
+        "nome": "NO_MICRORREGIAO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Cacoal"
+        ]
+      },
+      {
+        "ordem": 16,
+        "nome": "CO_MICRORREGIAO",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "6"
+        ]
+      },
+      {
+        "ordem": 17,
+        "nome": "NO_DISTRITO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "Alta Floresta D'Oeste",
+          "Filadélfia d'Oeste",
+          "Izidolândia"
+        ]
+      },
+      {
+        "ordem": 18,
+        "nome": "CO_DISTRITO",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "110001505",
+          "110001515",
+          "110001520"
+        ]
+      },
+      {
+        "ordem": 19,
+        "nome": "NO_ENTIDADE",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "EIEEF HAP BITT TUPARI",
+          "CEEJA LUIZ VAZ DE CAMOES",
+          "EMMEF 7 DE SETEMBRO"
+        ]
+      },
+      {
+        "ordem": 20,
+        "nome": "CO_ENTIDADE",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "11022558",
+          "11024275",
+          "11024291"
+        ]
+      },
+      {
+        "ordem": 21,
+        "nome": "TP_DEPENDENCIA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "ordem": 22,
+        "nome": "TP_CATEGORIA_ESCOLA_PRIVADA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 23,
+        "nome": "TP_LOCALIZACAO",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "2",
+          "1"
+        ]
+      },
+      {
+        "ordem": 24,
+        "nome": "TP_LOCALIZACAO_DIFERENCIADA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "2.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 25,
+        "nome": "DS_ENDERECO",
+        "prefixo": "DS",
+        "tipo_estatistico": "Qualitativa Descritiva",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Descrição textual de endereço ou detalhe cadastral",
+        "amostras": [
+          "TERRA INDIGENA RIO BRANCO",
+          "AVENIDA RIO DE JANEIRO",
+          "LINHA 60 COM A 140"
+        ]
+      },
+      {
+        "ordem": 26,
+        "nome": "NU_ENDERECO",
+        "prefixo": "NU",
+        "tipo_estatistico": "Identificador Cadastral / Temporal",
+        "categoria_macro": "Cadastral/Temporal",
+        "descricao_prefixo": "Número de registro, endereço, telefone, CNPJ ou Ano",
+        "amostras": [
+          "4776",
+          "3861",
+          "4503"
+        ]
+      },
+      {
+        "ordem": 27,
+        "nome": "DS_COMPLEMENTO",
+        "prefixo": "DS",
+        "tipo_estatistico": "Qualitativa Descritiva",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Descrição textual de endereço ou detalhe cadastral",
+        "amostras": [
+          "ALDEIA COLORADO",
+          "ESCOLA",
+          "ZONA RURAL"
+        ]
+      },
+      {
+        "ordem": 28,
+        "nome": "NO_BAIRRO",
+        "prefixo": "NO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Nome descritivo textual (escola, município, estado)",
+        "amostras": [
+          "RURAL",
+          "CIDADE ALTA",
+          "LINHA P.50"
+        ]
+      },
+      {
+        "ordem": 29,
+        "nome": "CO_CEP",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "76954000"
+        ]
+      },
+      {
+        "ordem": 30,
+        "nome": "NU_DDD",
+        "prefixo": "NU",
+        "tipo_estatistico": "Identificador Cadastral / Temporal",
+        "categoria_macro": "Cadastral/Temporal",
+        "descricao_prefixo": "Número de registro, endereço, telefone, CNPJ ou Ano",
+        "amostras": [
+          "69"
+        ]
+      },
+      {
+        "ordem": 31,
+        "nome": "NU_TELEFONE",
+        "prefixo": "NU",
+        "tipo_estatistico": "Identificador Cadastral / Temporal",
+        "categoria_macro": "Cadastral/Temporal",
+        "descricao_prefixo": "Número de registro, endereço, telefone, CNPJ ou Ano",
+        "amostras": [
+          "993784647.0",
+          "36412656.0",
+          "36413630.0"
+        ]
+      },
+      {
+        "ordem": 32,
+        "nome": "TP_SITUACAO_FUNCIONAMENTO",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "ordem": 33,
+        "nome": "CO_ORGAO_REGIONAL",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "15"
+        ]
+      },
+      {
+        "ordem": 34,
+        "nome": "DT_ANO_LETIVO_INICIO",
+        "prefixo": "DT",
+        "tipo_estatistico": "Temporal / Data",
+        "categoria_macro": "Temporal",
+        "descricao_prefixo": "Data de ocorrência, início ou encerramento",
+        "amostras": [
+          "12FEB2024:00:00:00",
+          "09FEB2024:00:00:00",
+          "08FEB2024:00:00:00"
+        ]
+      },
+      {
+        "ordem": 35,
+        "nome": "DT_ANO_LETIVO_TERMINO",
+        "prefixo": "DT",
+        "tipo_estatistico": "Temporal / Data",
+        "categoria_macro": "Temporal",
+        "descricao_prefixo": "Data de ocorrência, início ou encerramento",
+        "amostras": [
+          "13DEC2024:00:00:00",
+          "19DEC2024:00:00:00",
+          "14DEC2024:00:00:00"
+        ]
+      },
+      {
+        "ordem": 36,
+        "nome": "IN_VINCULO_SECRETARIA_EDUCACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 37,
+        "nome": "IN_VINCULO_SEGURANCA_PUBLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 38,
+        "nome": "IN_VINCULO_SECRETARIA_SAUDE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 39,
+        "nome": "IN_VINCULO_OUTRO_ORGAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 40,
+        "nome": "IN_PODER_PUBLICO_PARCERIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 41,
+        "nome": "TP_PODER_PUBLICO_PARCERIA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 42,
+        "nome": "IN_FORMA_CONT_TERMO_COLABORA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 43,
+        "nome": "IN_FORMA_CONT_TERMO_FOMENTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 44,
+        "nome": "IN_FORMA_CONT_ACORDO_COOP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 45,
+        "nome": "IN_FORMA_CONT_PRESTACAO_SERV",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 46,
+        "nome": "IN_FORMA_CONT_COOP_TEC_FIN",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 47,
+        "nome": "IN_FORMA_CONT_CONSORCIO_PUB",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 48,
+        "nome": "IN_FORMA_CONT_MU_TERMO_COLAB",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 49,
+        "nome": "IN_FORMA_CONT_MU_TERMO_FOMENTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 50,
+        "nome": "IN_FORMA_CONT_MU_ACORDO_COOP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 51,
+        "nome": "IN_FORMA_CONT_MU_PREST_SERV",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 52,
+        "nome": "IN_FORMA_CONT_MU_COOP_TEC_FIN",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 53,
+        "nome": "IN_FORMA_CONT_MU_CONSORCIO_PUB",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 54,
+        "nome": "IN_FORMA_CONT_ES_TERMO_COLAB",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 55,
+        "nome": "IN_FORMA_CONT_ES_TERMO_FOMENTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 56,
+        "nome": "IN_FORMA_CONT_ES_ACORDO_COOP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 57,
+        "nome": "IN_FORMA_CONT_ES_PREST_SERV",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 58,
+        "nome": "IN_FORMA_CONT_ES_COOP_TEC_FIN",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 59,
+        "nome": "IN_FORMA_CONT_ES_CONSORCIO_PUB",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 60,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_EMP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 61,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_ONG",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 62,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_OSCIP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 63,
+        "nome": "IN_MANT_ESCOLA_PRIV_ONG_OSCIP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 64,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_SIND",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 65,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_SIST_S",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 66,
+        "nome": "IN_MANT_ESCOLA_PRIVADA_S_FINS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 67,
+        "nome": "NU_CNPJ_ESCOLA_PRIVADA",
+        "prefixo": "NU",
+        "tipo_estatistico": "Identificador Cadastral / Temporal",
+        "categoria_macro": "Cadastral/Temporal",
+        "descricao_prefixo": "Número de registro, endereço, telefone, CNPJ ou Ano",
+        "amostras": [
+          "99999999999999.0"
+        ]
+      },
+      {
+        "ordem": 68,
+        "nome": "NU_CNPJ_MANTENEDORA",
+        "prefixo": "NU",
+        "tipo_estatistico": "Identificador Cadastral / Temporal",
+        "categoria_macro": "Cadastral/Temporal",
+        "descricao_prefixo": "Número de registro, endereço, telefone, CNPJ ou Ano",
+        "amostras": [
+          "5976299000138.0"
+        ]
+      },
+      {
+        "ordem": 69,
+        "nome": "TP_REGULAMENTACAO",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "1.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 70,
+        "nome": "TP_RESPONSAVEL_REGULAMENTACAO",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "2.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 71,
+        "nome": "CO_ESCOLA_SEDE_VINCULADA",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": []
+      },
+      {
+        "ordem": 72,
+        "nome": "CO_IES_OFERTANTE",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": []
+      },
+      {
+        "ordem": 73,
+        "nome": "IN_LOCAL_FUNC_PREDIO_ESCOLAR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 74,
+        "nome": "TP_OCUPACAO_PREDIO_ESCOLAR",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 75,
+        "nome": "IN_LOCAL_FUNC_SOCIOEDUCATIVO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 76,
+        "nome": "IN_LOCAL_FUNC_UNID_PRISIONAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 77,
+        "nome": "IN_LOCAL_FUNC_PRISIONAL_SOCIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 78,
+        "nome": "IN_LOCAL_FUNC_GALPAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 79,
+        "nome": "TP_OCUPACAO_GALPAO",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": []
+      },
+      {
+        "ordem": 80,
+        "nome": "IN_LOCAL_FUNC_SALAS_OUTRA_ESC",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 81,
+        "nome": "IN_LOCAL_FUNC_OUTROS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 82,
+        "nome": "IN_PREDIO_COMPARTILHADO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 83,
+        "nome": "IN_AGUA_POTAVEL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 84,
+        "nome": "IN_AGUA_REDE_PUBLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 85,
+        "nome": "IN_AGUA_POCO_ARTESIANO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 86,
+        "nome": "IN_AGUA_CACIMBA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 87,
+        "nome": "IN_AGUA_FONTE_RIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 88,
+        "nome": "IN_AGUA_INEXISTENTE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 89,
+        "nome": "IN_AGUA_CARRO_PIPA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 90,
+        "nome": "IN_ENERGIA_REDE_PUBLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 91,
+        "nome": "IN_ENERGIA_GERADOR_FOSSIL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 92,
+        "nome": "IN_ENERGIA_RENOVAVEL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 93,
+        "nome": "IN_ENERGIA_INEXISTENTE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 94,
+        "nome": "IN_ESGOTO_REDE_PUBLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 95,
+        "nome": "IN_ESGOTO_FOSSA_SEPTICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 96,
+        "nome": "IN_ESGOTO_FOSSA_COMUM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 97,
+        "nome": "IN_ESGOTO_FOSSA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 98,
+        "nome": "IN_ESGOTO_INEXISTENTE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 99,
+        "nome": "IN_LIXO_SERVICO_COLETA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 100,
+        "nome": "IN_LIXO_QUEIMA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 101,
+        "nome": "IN_LIXO_ENTERRA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 102,
+        "nome": "IN_LIXO_DESTINO_FINAL_PUBLICO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 103,
+        "nome": "IN_LIXO_DESCARTA_OUTRA_AREA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 104,
+        "nome": "IN_TRATAMENTO_LIXO_SEPARACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 105,
+        "nome": "IN_TRATAMENTO_LIXO_REUTILIZA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 106,
+        "nome": "IN_TRATAMENTO_LIXO_RECICLAGEM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 107,
+        "nome": "IN_TRATAMENTO_LIXO_INEXISTENTE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 108,
+        "nome": "IN_ALMOXARIFADO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 109,
+        "nome": "IN_AREA_VERDE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 110,
+        "nome": "IN_AREA_PLANTIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 111,
+        "nome": "IN_AUDITORIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 112,
+        "nome": "IN_BANHEIRO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 113,
+        "nome": "IN_BANHEIRO_EI",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 114,
+        "nome": "IN_BANHEIRO_PNE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 115,
+        "nome": "IN_BANHEIRO_FUNCIONARIOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 116,
+        "nome": "IN_BANHEIRO_CHUVEIRO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 117,
+        "nome": "IN_BIBLIOTECA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 118,
+        "nome": "IN_BIBLIOTECA_SALA_LEITURA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 119,
+        "nome": "IN_COZINHA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 120,
+        "nome": "IN_DESPENSA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 121,
+        "nome": "IN_DORMITORIO_ALUNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 122,
+        "nome": "IN_DORMITORIO_PROFESSOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 123,
+        "nome": "IN_LABORATORIO_CIENCIAS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 124,
+        "nome": "IN_LABORATORIO_INFORMATICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 125,
+        "nome": "IN_LABORATORIO_EDUC_PROF",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 126,
+        "nome": "IN_PATIO_COBERTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 127,
+        "nome": "IN_PATIO_DESCOBERTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 128,
+        "nome": "IN_PARQUE_INFANTIL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 129,
+        "nome": "IN_PISCINA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 130,
+        "nome": "IN_QUADRA_ESPORTES",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 131,
+        "nome": "IN_QUADRA_ESPORTES_COBERTA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 132,
+        "nome": "IN_QUADRA_ESPORTES_DESCOBERTA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 133,
+        "nome": "IN_REFEITORIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 134,
+        "nome": "IN_SALA_ATELIE_ARTES",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 135,
+        "nome": "IN_SALA_MUSICA_CORAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 136,
+        "nome": "IN_SALA_ESTUDIO_DANCA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 137,
+        "nome": "IN_SALA_MULTIUSO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 138,
+        "nome": "IN_SALA_ESTUDIO_GRAVACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 139,
+        "nome": "IN_SALA_OFICINAS_EDUC_PROF",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 140,
+        "nome": "IN_SALA_DIRETORIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 141,
+        "nome": "IN_SALA_LEITURA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 142,
+        "nome": "IN_SALA_PROFESSOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 143,
+        "nome": "IN_SALA_REPOUSO_ALUNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 144,
+        "nome": "IN_SECRETARIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 145,
+        "nome": "IN_SALA_ATENDIMENTO_ESPECIAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 146,
+        "nome": "IN_TERREIRAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 147,
+        "nome": "IN_VIVEIRO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 148,
+        "nome": "IN_DEPENDENCIAS_OUTRAS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 149,
+        "nome": "IN_ACESSIBILIDADE_CORRIMAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 150,
+        "nome": "IN_ACESSIBILIDADE_ELEVADOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 151,
+        "nome": "IN_ACESSIBILIDADE_PISOS_TATEIS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 152,
+        "nome": "IN_ACESSIBILIDADE_VAO_LIVRE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 153,
+        "nome": "IN_ACESSIBILIDADE_RAMPAS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 154,
+        "nome": "IN_ACESSIBILIDADE_SINAL_SONORO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 155,
+        "nome": "IN_ACESSIBILIDADE_SINAL_TATIL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 156,
+        "nome": "IN_ACESSIBILIDADE_SINAL_VISUAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 157,
+        "nome": "IN_ACESSIBILIDADE_INEXISTENTE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 158,
+        "nome": "IN_ACESSIBILIDADE_SINALIZACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 159,
+        "nome": "QT_SALAS_UTILIZADAS_DENTRO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "9.0",
+          "6.0"
+        ]
+      },
+      {
+        "ordem": 160,
+        "nome": "QT_SALAS_UTILIZADAS_FORA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "24.0"
+        ]
+      },
+      {
+        "ordem": 161,
+        "nome": "QT_SALAS_UTILIZADAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "13.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 162,
+        "nome": "QT_SALAS_UTILIZA_CLIMATIZADAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "13.0",
+          "7.0"
+        ]
+      },
+      {
+        "ordem": 163,
+        "nome": "QT_SALAS_UTILIZADAS_ACESSIVEIS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "13.0",
+          "33.0"
+        ]
+      },
+      {
+        "ordem": 164,
+        "nome": "IN_EQUIP_PARABOLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 165,
+        "nome": "IN_COMPUTADOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 166,
+        "nome": "IN_EQUIP_COPIADORA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 167,
+        "nome": "IN_EQUIP_IMPRESSORA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 168,
+        "nome": "IN_EQUIP_IMPRESSORA_MULT",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 169,
+        "nome": "IN_EQUIP_SCANNER",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 170,
+        "nome": "IN_EQUIP_NENHUM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 171,
+        "nome": "IN_EQUIP_DVD",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 172,
+        "nome": "QT_EQUIP_DVD",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 173,
+        "nome": "IN_EQUIP_SOM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 174,
+        "nome": "QT_EQUIP_SOM",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "12.0",
+          "7.0"
+        ]
+      },
+      {
+        "ordem": 175,
+        "nome": "IN_EQUIP_TV",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 176,
+        "nome": "QT_EQUIP_TV",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "3.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 177,
+        "nome": "IN_EQUIP_LOUSA_DIGITAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 178,
+        "nome": "QT_EQUIP_LOUSA_DIGITAL",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "19.0"
+        ]
+      },
+      {
+        "ordem": 179,
+        "nome": "IN_EQUIP_MULTIMIDIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 180,
+        "nome": "QT_EQUIP_MULTIMIDIA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "12.0",
+          "7.0"
+        ]
+      },
+      {
+        "ordem": 181,
+        "nome": "IN_DESKTOP_ALUNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 182,
+        "nome": "QT_DESKTOP_ALUNO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "19.0",
+          "25.0"
+        ]
+      },
+      {
+        "ordem": 183,
+        "nome": "IN_COMP_PORTATIL_ALUNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 184,
+        "nome": "QT_COMP_PORTATIL_ALUNO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "4.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 185,
+        "nome": "IN_TABLET_ALUNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 186,
+        "nome": "QT_TABLET_ALUNO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 187,
+        "nome": "IN_INTERNET",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 188,
+        "nome": "IN_INTERNET_ALUNOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 189,
+        "nome": "IN_INTERNET_ADMINISTRATIVO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 190,
+        "nome": "IN_INTERNET_APRENDIZAGEM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 191,
+        "nome": "IN_INTERNET_COMUNIDADE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 192,
+        "nome": "IN_ACESSO_INTERNET_COMPUTADOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 193,
+        "nome": "IN_ACES_INTERNET_DISP_PESSOAIS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 194,
+        "nome": "TP_REDE_LOCAL",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "9.0",
+          "3.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 195,
+        "nome": "IN_BANDA_LARGA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 196,
+        "nome": "IN_PROF_ADMINISTRATIVOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 197,
+        "nome": "QT_PROF_ADMINISTRATIVOS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 198,
+        "nome": "IN_PROF_SERVICOS_GERAIS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 199,
+        "nome": "QT_PROF_SERVICOS_GERAIS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "14.0"
+        ]
+      },
+      {
+        "ordem": 200,
+        "nome": "IN_PROF_BIBLIOTECARIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 201,
+        "nome": "QT_PROF_BIBLIOTECARIO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 202,
+        "nome": "IN_PROF_SAUDE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 203,
+        "nome": "QT_PROF_SAUDE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 204,
+        "nome": "IN_PROF_COORDENADOR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 205,
+        "nome": "QT_PROF_COORDENADOR",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 206,
+        "nome": "IN_PROF_FONAUDIOLOGO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 207,
+        "nome": "QT_PROF_FONAUDIOLOGO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 208,
+        "nome": "IN_PROF_NUTRICIONISTA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 209,
+        "nome": "QT_PROF_NUTRICIONISTA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 210,
+        "nome": "IN_PROF_PSICOLOGO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 211,
+        "nome": "QT_PROF_PSICOLOGO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 212,
+        "nome": "IN_PROF_ALIMENTACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 213,
+        "nome": "QT_PROF_ALIMENTACAO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 214,
+        "nome": "IN_PROF_PEDAGOGIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 215,
+        "nome": "QT_PROF_PEDAGOGIA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "3.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 216,
+        "nome": "IN_PROF_SECRETARIO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 217,
+        "nome": "QT_PROF_SECRETARIO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 218,
+        "nome": "IN_PROF_SEGURANCA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 219,
+        "nome": "QT_PROF_SEGURANCA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 220,
+        "nome": "IN_PROF_MONITORES",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 221,
+        "nome": "QT_PROF_MONITORES",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 222,
+        "nome": "IN_PROF_GESTAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 223,
+        "nome": "QT_PROF_GESTAO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 224,
+        "nome": "IN_PROF_ASSIST_SOCIAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 225,
+        "nome": "QT_PROF_ASSIST_SOCIAL",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 226,
+        "nome": "IN_PROF_TRAD_LIBRAS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 227,
+        "nome": "QT_PROF_TRAD_LIBRAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 228,
+        "nome": "IN_PROF_AGRICOLA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 229,
+        "nome": "QT_PROF_AGRICOLA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 230,
+        "nome": "IN_PROF_REVISOR_BRAILLE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 231,
+        "nome": "QT_PROF_REVISOR_BRAILLE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 232,
+        "nome": "IN_ALIMENTACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 233,
+        "nome": "IN_MATERIAL_PED_MULTIMIDIA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 234,
+        "nome": "IN_MATERIAL_PED_INFANTIL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 235,
+        "nome": "IN_MATERIAL_PED_CIENTIFICO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 236,
+        "nome": "IN_MATERIAL_PED_DIFUSAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 237,
+        "nome": "IN_MATERIAL_PED_MUSICAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 238,
+        "nome": "IN_MATERIAL_PED_JOGOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 239,
+        "nome": "IN_MATERIAL_PED_ARTISTICAS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 240,
+        "nome": "IN_MATERIAL_PED_PROFISSIONAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 241,
+        "nome": "IN_MATERIAL_PED_DESPORTIVA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 242,
+        "nome": "IN_MATERIAL_PED_INDIGENA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 243,
+        "nome": "IN_MATERIAL_PED_ETNICO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 244,
+        "nome": "IN_MATERIAL_PED_CAMPO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 245,
+        "nome": "IN_MATERIAL_PED_BIL_SURDOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 246,
+        "nome": "IN_MATERIAL_PED_AGRICOLA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 247,
+        "nome": "IN_MATERIAL_PED_QUILOMBOLA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 248,
+        "nome": "IN_MATERIAL_PED_EDU_ESP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 249,
+        "nome": "IN_MATERIAL_PED_NENHUM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 250,
+        "nome": "IN_EDUCACAO_INDIGENA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 251,
+        "nome": "TP_INDIGENA_LINGUA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 252,
+        "nome": "CO_LINGUA_INDIGENA_1",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": [
+          "171.0"
+        ]
+      },
+      {
+        "ordem": 253,
+        "nome": "CO_LINGUA_INDIGENA_2",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": []
+      },
+      {
+        "ordem": 254,
+        "nome": "CO_LINGUA_INDIGENA_3",
+        "prefixo": "CO",
+        "tipo_estatistico": "Qualitativa Nominal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Código identificador numérico (MEC, IBGE, UF, Município)",
+        "amostras": []
+      },
+      {
+        "ordem": 255,
+        "nome": "IN_EXAME_SELECAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 256,
+        "nome": "IN_RESERVA_PPI",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 257,
+        "nome": "IN_RESERVA_RENDA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 258,
+        "nome": "IN_RESERVA_PUBLICA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 259,
+        "nome": "IN_RESERVA_PCD",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 260,
+        "nome": "IN_RESERVA_OUTROS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 261,
+        "nome": "IN_RESERVA_NENHUMA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 262,
+        "nome": "IN_REDES_SOCIAIS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 263,
+        "nome": "IN_ESPACO_ATIVIDADE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 264,
+        "nome": "IN_ESPACO_EQUIPAMENTO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 265,
+        "nome": "IN_ORGAO_ASS_PAIS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 266,
+        "nome": "IN_ORGAO_ASS_PAIS_MESTRES",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 267,
+        "nome": "IN_ORGAO_CONSELHO_ESCOLAR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 268,
+        "nome": "IN_ORGAO_GREMIO_ESTUDANTIL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 269,
+        "nome": "IN_ORGAO_OUTROS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 270,
+        "nome": "IN_ORGAO_NENHUM",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 271,
+        "nome": "TP_PROPOSTA_PEDAGOGICA",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 272,
+        "nome": "IN_EDUC_AMBIENTAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 273,
+        "nome": "IN_EDUC_AMB_CONTEUDO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 274,
+        "nome": "IN_EDUC_AMB_CURRICULAR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 275,
+        "nome": "IN_EDUC_AMB_EIXO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 276,
+        "nome": "IN_EDUC_AMB_EVENTOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "9.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 277,
+        "nome": "IN_EDUC_AMB_PROJETOS",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 278,
+        "nome": "IN_EDUC_AMB_NENHUMA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 279,
+        "nome": "TP_AEE",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 280,
+        "nome": "TP_ATIVIDADE_COMPLEMENTAR",
+        "prefixo": "TP",
+        "tipo_estatistico": "Qualitativa Categórica / Ordinal",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Tipo ou classificação administrativa/estrutural",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 281,
+        "nome": "IN_MEDIACAO_PRESENCIAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 282,
+        "nome": "IN_MEDIACAO_SEMIPRESENCIAL",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 283,
+        "nome": "IN_MEDIACAO_EAD",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 284,
+        "nome": "IN_REGULAR",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 285,
+        "nome": "IN_DIURNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 286,
+        "nome": "IN_NOTURNO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 287,
+        "nome": "IN_EAD",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 288,
+        "nome": "IN_ESCOLARIZACAO",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 289,
+        "nome": "IN_INF",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 290,
+        "nome": "IN_INF_CRE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 291,
+        "nome": "IN_INF_PRE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 292,
+        "nome": "IN_FUND",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 293,
+        "nome": "IN_FUND_AI",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "1.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 294,
+        "nome": "IN_FUND_AF",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 295,
+        "nome": "IN_MED",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 296,
+        "nome": "IN_PROF",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 297,
+        "nome": "IN_PROF_TEC",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 298,
+        "nome": "IN_EJA",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 299,
+        "nome": "IN_EJA_FUND",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 300,
+        "nome": "IN_EJA_MED",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 301,
+        "nome": "IN_ESP",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 302,
+        "nome": "IN_ESP_CC",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 303,
+        "nome": "IN_ESP_CE",
+        "prefixo": "IN",
+        "tipo_estatistico": "Qualitativa Binária (Dummy)",
+        "categoria_macro": "Qualitativa",
+        "descricao_prefixo": "Indicador binário de presença ou ausência (0 = Não, 1 = Sim)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 304,
+        "nome": "QT_MAT_BAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "131.0",
+          "169.0"
+        ]
+      },
+      {
+        "ordem": 305,
+        "nome": "QT_MAT_INF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "32.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 306,
+        "nome": "QT_MAT_INF_CRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "126.0",
+          "111.0"
+        ]
+      },
+      {
+        "ordem": 307,
+        "nome": "QT_MAT_INF_PRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "32.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 308,
+        "nome": "QT_MAT_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "137.0"
+        ]
+      },
+      {
+        "ordem": 309,
+        "nome": "QT_MAT_FUND_AI",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "66.0"
+        ]
+      },
+      {
+        "ordem": 310,
+        "nome": "QT_MAT_FUND_AI_1",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "17.0"
+        ]
+      },
+      {
+        "ordem": 311,
+        "nome": "QT_MAT_FUND_AI_2",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "15.0"
+        ]
+      },
+      {
+        "ordem": 312,
+        "nome": "QT_MAT_FUND_AI_3",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "18.0",
+          "5.0"
+        ]
+      },
+      {
+        "ordem": 313,
+        "nome": "QT_MAT_FUND_AI_4",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 314,
+        "nome": "QT_MAT_FUND_AI_5",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 315,
+        "nome": "QT_MAT_FUND_AF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "71.0",
+          "237.0"
+        ]
+      },
+      {
+        "ordem": 316,
+        "nome": "QT_MAT_FUND_AF_6",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "18.0",
+          "62.0"
+        ]
+      },
+      {
+        "ordem": 317,
+        "nome": "QT_MAT_FUND_AF_7",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "16.0",
+          "65.0"
+        ]
+      },
+      {
+        "ordem": 318,
+        "nome": "QT_MAT_FUND_AF_8",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "21.0",
+          "59.0"
+        ]
+      },
+      {
+        "ordem": 319,
+        "nome": "QT_MAT_FUND_AF_9",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "16.0",
+          "51.0"
+        ]
+      },
+      {
+        "ordem": 320,
+        "nome": "QT_MAT_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "361.0",
+          "250.0"
+        ]
+      },
+      {
+        "ordem": 321,
+        "nome": "QT_MAT_MED_PROP",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "361.0",
+          "250.0"
+        ]
+      },
+      {
+        "ordem": 322,
+        "nome": "QT_MAT_MED_PROP_1",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "111.0",
+          "103.0"
+        ]
+      },
+      {
+        "ordem": 323,
+        "nome": "QT_MAT_MED_PROP_2",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "148.0",
+          "99.0"
+        ]
+      },
+      {
+        "ordem": 324,
+        "nome": "QT_MAT_MED_PROP_3",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "102.0",
+          "48.0"
+        ]
+      },
+      {
+        "ordem": 325,
+        "nome": "QT_MAT_MED_PROP_4",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 326,
+        "nome": "QT_MAT_MED_PROP_NS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 327,
+        "nome": "QT_MAT_MED_CT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 328,
+        "nome": "QT_MAT_MED_CT_1",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 329,
+        "nome": "QT_MAT_MED_CT_2",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 330,
+        "nome": "QT_MAT_MED_CT_3",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 331,
+        "nome": "QT_MAT_MED_CT_4",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 332,
+        "nome": "QT_MAT_MED_CT_NS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 333,
+        "nome": "QT_MAT_MED_NM",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 334,
+        "nome": "QT_MAT_MED_NM_1",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 335,
+        "nome": "QT_MAT_MED_NM_2",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 336,
+        "nome": "QT_MAT_MED_NM_3",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 337,
+        "nome": "QT_MAT_MED_NM_4",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 338,
+        "nome": "QT_MAT_PROF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 339,
+        "nome": "QT_MAT_PROF_TEC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 340,
+        "nome": "QT_MAT_PROF_TEC_CONC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 341,
+        "nome": "QT_MAT_PROF_TEC_SUBS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 342,
+        "nome": "QT_MAT_PROF_FIC_CONC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 343,
+        "nome": "QT_MAT_EJA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "131.0",
+          "71.0"
+        ]
+      },
+      {
+        "ordem": 344,
+        "nome": "QT_MAT_EJA_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "54.0",
+          "31.0"
+        ]
+      },
+      {
+        "ordem": 345,
+        "nome": "QT_MAT_EJA_FUND_AI",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "11.0"
+        ]
+      },
+      {
+        "ordem": 346,
+        "nome": "QT_MAT_EJA_FUND_AF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "54.0",
+          "20.0"
+        ]
+      },
+      {
+        "ordem": 347,
+        "nome": "QT_MAT_EJA_FUND_FIC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 348,
+        "nome": "QT_MAT_EJA_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "77.0",
+          "40.0"
+        ]
+      },
+      {
+        "ordem": 349,
+        "nome": "QT_MAT_EJA_MED_NPROF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "77.0",
+          "40.0"
+        ]
+      },
+      {
+        "ordem": 350,
+        "nome": "QT_MAT_EJA_MED_FIC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 351,
+        "nome": "QT_MAT_EJA_MED_TEC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 352,
+        "nome": "QT_MAT_ESP",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "8.0"
+        ]
+      },
+      {
+        "ordem": 353,
+        "nome": "QT_MAT_ESP_CC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "8.0"
+        ]
+      },
+      {
+        "ordem": 354,
+        "nome": "QT_MAT_ESP_CE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 355,
+        "nome": "QT_MAT_BAS_FEM",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "2.0",
+          "84.0",
+          "76.0"
+        ]
+      },
+      {
+        "ordem": 356,
+        "nome": "QT_MAT_BAS_MASC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "2.0",
+          "47.0",
+          "93.0"
+        ]
+      },
+      {
+        "ordem": 357,
+        "nome": "QT_MAT_BAS_ND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 358,
+        "nome": "QT_MAT_BAS_BRANCA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "33.0",
+          "73.0"
+        ]
+      },
+      {
+        "ordem": 359,
+        "nome": "QT_MAT_BAS_PRETA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "6.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 360,
+        "nome": "QT_MAT_BAS_PARDA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "88.0",
+          "89.0"
+        ]
+      },
+      {
+        "ordem": 361,
+        "nome": "QT_MAT_BAS_AMARELA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 362,
+        "nome": "QT_MAT_BAS_INDIGENA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "10.0",
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 363,
+        "nome": "QT_MAT_BAS_0_3",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "114.0",
+          "101.0"
+        ]
+      },
+      {
+        "ordem": 364,
+        "nome": "QT_MAT_BAS_4_5",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "29.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 365,
+        "nome": "QT_MAT_BAS_6_10",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "3.0",
+          "0.0",
+          "73.0"
+        ]
+      },
+      {
+        "ordem": 366,
+        "nome": "QT_MAT_BAS_11_14",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "63.0"
+        ]
+      },
+      {
+        "ordem": 367,
+        "nome": "QT_MAT_BAS_15_17",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "13.0",
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 368,
+        "nome": "QT_MAT_BAS_18_MAIS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "118.0",
+          "47.0"
+        ]
+      },
+      {
+        "ordem": 369,
+        "nome": "QT_MAT_BAS_D",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "169.0"
+        ]
+      },
+      {
+        "ordem": 370,
+        "nome": "QT_MAT_BAS_N",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "131.0",
+          "117.0"
+        ]
+      },
+      {
+        "ordem": 371,
+        "nome": "QT_MAT_BAS_EAD",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 372,
+        "nome": "QT_MAT_INF_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "29.0",
+          "26.0"
+        ]
+      },
+      {
+        "ordem": 373,
+        "nome": "QT_MAT_INF_CRE_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "29.0",
+          "26.0"
+        ]
+      },
+      {
+        "ordem": 374,
+        "nome": "QT_MAT_INF_PRE_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 375,
+        "nome": "QT_MAT_FUND_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "13.0",
+          "117.0"
+        ]
+      },
+      {
+        "ordem": 376,
+        "nome": "QT_MAT_FUND_AI_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 377,
+        "nome": "QT_MAT_FUND_AF_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "13.0",
+          "117.0"
+        ]
+      },
+      {
+        "ordem": 378,
+        "nome": "QT_MAT_MED_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "250.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 379,
+        "nome": "QT_MAT_ZR_URB",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "80.0",
+          "302.0"
+        ]
+      },
+      {
+        "ordem": 380,
+        "nome": "QT_MAT_ZR_RUR",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "51.0",
+          "169.0"
+        ]
+      },
+      {
+        "ordem": 381,
+        "nome": "QT_MAT_ZR_NA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 382,
+        "nome": "QT_TRANSP_PUBLICO",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "132.0",
+          "254.0"
+        ]
+      },
+      {
+        "ordem": 383,
+        "nome": "QT_TRANSP_RESP_EST",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "48.0",
+          "31.0"
+        ]
+      },
+      {
+        "ordem": 384,
+        "nome": "QT_TRANSP_RESP_MUN",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "132.0",
+          "254.0"
+        ]
+      },
+      {
+        "ordem": 385,
+        "nome": "QT_DOC_BAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "8.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 386,
+        "nome": "QT_DOC_INF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 387,
+        "nome": "QT_DOC_INF_CRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "10.0"
+        ]
+      },
+      {
+        "ordem": 388,
+        "nome": "QT_DOC_INF_PRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 389,
+        "nome": "QT_DOC_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "11.0"
+        ]
+      },
+      {
+        "ordem": 390,
+        "nome": "QT_DOC_FUND_AI",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "1.0",
+          "0.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 391,
+        "nome": "QT_DOC_FUND_AF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "8.0",
+          "13.0"
+        ]
+      },
+      {
+        "ordem": 392,
+        "nome": "QT_DOC_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "38.0",
+          "20.0"
+        ]
+      },
+      {
+        "ordem": 393,
+        "nome": "QT_DOC_PROF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 394,
+        "nome": "QT_DOC_PROF_TEC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 395,
+        "nome": "QT_DOC_EJA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "8.0",
+          "17.0"
+        ]
+      },
+      {
+        "ordem": 396,
+        "nome": "QT_DOC_EJA_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "6.0",
+          "11.0"
+        ]
+      },
+      {
+        "ordem": 397,
+        "nome": "QT_DOC_EJA_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "8.0",
+          "14.0"
+        ]
+      },
+      {
+        "ordem": 398,
+        "nome": "QT_DOC_ESP",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "6.0",
+          "10.0"
+        ]
+      },
+      {
+        "ordem": 399,
+        "nome": "QT_DOC_ESP_CC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "6.0",
+          "10.0"
+        ]
+      },
+      {
+        "ordem": 400,
+        "nome": "QT_DOC_ESP_CE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 401,
+        "nome": "QT_TUR_BAS",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "10.0",
+          "40.0"
+        ]
+      },
+      {
+        "ordem": 402,
+        "nome": "QT_TUR_INF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 403,
+        "nome": "QT_TUR_INF_CRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "8.0"
+        ]
+      },
+      {
+        "ordem": 404,
+        "nome": "QT_TUR_INF_PRE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "1.0"
+        ]
+      },
+      {
+        "ordem": 405,
+        "nome": "QT_TUR_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "8.0"
+        ]
+      },
+      {
+        "ordem": 406,
+        "nome": "QT_TUR_FUND_AI",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 407,
+        "nome": "QT_TUR_FUND_AF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "5.0",
+          "11.0"
+        ]
+      },
+      {
+        "ordem": 408,
+        "nome": "QT_TUR_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "29.0",
+          "8.0"
+        ]
+      },
+      {
+        "ordem": 409,
+        "nome": "QT_TUR_PROF",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 410,
+        "nome": "QT_TUR_PROF_TEC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 411,
+        "nome": "QT_TUR_EJA",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "9.0"
+        ]
+      },
+      {
+        "ordem": 412,
+        "nome": "QT_TUR_EJA_FUND",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "6.0"
+        ]
+      },
+      {
+        "ordem": 413,
+        "nome": "QT_TUR_EJA_MED",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "3.0"
+        ]
+      },
+      {
+        "ordem": 414,
+        "nome": "QT_TUR_ESP",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "7.0"
+        ]
+      },
+      {
+        "ordem": 415,
+        "nome": "QT_TUR_ESP_CC",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0",
+          "7.0"
+        ]
+      },
+      {
+        "ordem": 416,
+        "nome": "QT_TUR_ESP_CE",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 417,
+        "nome": "QT_TUR_BAS_D",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "4.0",
+          "0.0",
+          "10.0"
+        ]
+      },
+      {
+        "ordem": 418,
+        "nome": "QT_TUR_BAS_N",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0",
+          "5.0"
+        ]
+      },
+      {
+        "ordem": 419,
+        "nome": "QT_TUR_BAS_EAD",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 420,
+        "nome": "QT_TUR_INF_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 421,
+        "nome": "QT_TUR_INF_CRE_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "2.0"
+        ]
+      },
+      {
+        "ordem": 422,
+        "nome": "QT_TUR_INF_PRE_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 423,
+        "nome": "QT_TUR_FUND_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 424,
+        "nome": "QT_TUR_FUND_AI_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0"
+        ]
+      },
+      {
+        "ordem": 425,
+        "nome": "QT_TUR_FUND_AF_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "4.0"
+        ]
+      },
+      {
+        "ordem": 426,
+        "nome": "QT_TUR_MED_INT",
+        "prefixo": "QT",
+        "tipo_estatistico": "Quantitativa Discreta",
+        "categoria_macro": "Quantitativa",
+        "descricao_prefixo": "Contagem numérica (matrículas, docentes, turmas, salas, equipamentos)",
+        "amostras": [
+          "0.0",
+          "8.0"
+        ]
+      }
+    ]
+  }
+}

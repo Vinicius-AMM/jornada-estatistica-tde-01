@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Estatística - Censo Escolar 2024</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Chart.js para gráficos interativos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Estilos da Dashboard (Inspirado no ByeWind Design System) -->
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+  <!-- Janela Principal com Bordas Arredondadas (App Window) -->
+  <div class="app-window">
+
+    <!-- 1. SIDEBAR LATERAL ESQUERDA -->
+    <aside class="app-sidebar">
+      <!-- Identificação do Usuário / Projeto -->
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">📊</div>
+        <div class="sidebar-user-info">
+          <h3>Jornada de Dados</h3>
+          <p>UniFAP</p>
+          <p>Prof. Sávio Fontenele</p>
+        </div>
+      </div>
+
+      <!-- Seção: Navegação Rápida -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Favoritos</div>
+        <ul class="sidebar-menu">
+          <li>
+            <button class="sidebar-link active" data-target="tab-p5" data-title="Visão Geral & Identificação">
+              <span class="sidebar-link-icon">📁</span>
+              <span>Visão Geral</span>
+              <span class="sidebar-badge">P5</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-link" data-target="tab-explorador" data-title="Explorador Interativo de Variáveis">
+              <span class="sidebar-link-icon">🔍</span>
+              <span>Explorador</span>
+              <span class="sidebar-badge">426</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Seção: Prioridades Metodológicas -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Prioridades do Projeto</div>
+        <ul class="sidebar-menu">
+          <li>
+            <button class="sidebar-link" data-target="tab-p5" data-title="Identificação do Arquivo e MD5">
+              <span class="sidebar-link-icon">📄</span>
+              <span>Identificação</span>
+              <span class="sidebar-badge">P5</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-link" data-target="tab-p2" data-title="Contagem de Variáveis e Prefixos">
+              <span class="sidebar-link-icon">🔢</span>
+              <span>Contagem</span>
+              <span class="sidebar-badge">P2</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-link" data-target="tab-p3"
+              data-title="Variáveis Quantitativas e Estatística Descritiva">
+              <span class="sidebar-link-icon">📈</span>
+              <span>Quantitativas</span>
+              <span class="sidebar-badge">P3</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-link" data-target="tab-p4" data-title="Valores Ausentes e Banda Larga">
+              <span class="sidebar-link-icon">📉</span>
+              <span>Valores Ausentes</span>
+              <span class="sidebar-badge">P4</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <p><strong>Equipe de Desenvolvimento:</strong></p>
+        <ul
+          style="list-style: none; margin-top: 6px; display: flex; flex-direction: column; gap: 4px; font-size: 0.73rem;">
+          <li>• João Victor Cordeiro</li>
+          <li>• Kauê Ferreira Gomes</li>
+          <li>• Paulo Vitor da Costa</li>
+          <li>• Vinicius Aurélio Marinho - Desenvolvedor</li>
+          <li>• Yuri Avner Cardoso</li>
+        </ul>
+        <p style="margin-top: 8px; font-size: 0.7rem; color: var(--text-muted);">
+          ADS & SI • UniFAP 2026
+        </p>
+      </div>
+      <!-- Rodapé da Sidebar -->
+      <div class="sidebar-footer">
+        <p><strong>Estatística Básica</strong></p>
+        <p>Análise Exploratória de Dados • Microdados Oficiais</p>
+      </div>
+    </aside>
+
+    <!-- 2. ÁREA CENTRAL (Centro com Topbar e Conteúdo Principal) -->
+    <main class="app-center-panel">
+
+      <!-- Topbar com Breadcrumbs e Ações -->
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <nav class="breadcrumbs">
+            <span>Estatística (TDE 1)</span>
+            <span class="separator">|</span>
+            <span>UniFAP</span>
+            <span class="separator">|</span>
+            <span class="current" id="breadcrumb-current">Visão Geral & Identificação da Base</span>
+          </nav>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Campo de Busca Rápida -->
+          <div class="topbar-search">
+            <span style="font-size: 13px; color: var(--text-muted);">🔍</span>
+            <input type="text" id="topbar-search-input" placeholder="Buscar variável...">
+            <span class="topbar-search-kbd">⌘/</span>
+          </div>
+
+          <div class="status-badge-clean">
+            <span class="status-dot-green"></span>
+            <span>Servidor Ativo</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo do Dashboard -->
+      <div class="app-content">
+
+        <!-- Título da Seção e Seletor de Período -->
+        <div class="overview-header">
+          <div class="overview-title">
+            <h2 id="section-main-title">Visão Geral & Identificação da Base</h2>
+            <p>Microdados da Educação Básica 2024 • INEP / Ministério da Educação</p>
+          </div>
+          <div class="overview-date-badge">
+            <span>📅 Censo Escolar 2024</span>
+          </div>
+        </div>
+
+        <!-- KPI CARDS PASTÉIS (Estilo Views / Visits / New Users da Referência) -->
+        <section class="kpi-cards-row">
+          <!-- Card 1: Azul Pastel (Arquivo & MD5) -->
+          <div class="pastel-card blue">
+            <div class="pastel-card-header">
+              <span>Arquivo Analisado</span>
+              <span class="pastel-trend up" id="kpi-md5-badge">✓ MD5 Íntegro</span>
+            </div>
+            <div class="pastel-card-body">
+              <div class="pastel-card-value" style="font-size: 1.15rem; word-break: break-all;" id="kpi-arquivo">
+                microdados_ed_basica_2024.csv
+              </div>
+            </div>
+            <div class="pastel-card-footer" id="kpi-tamanho-sub">207.83 MB • Base Oficial</div>
+          </div>
+
+          <!-- Card 2: Verde Menta Pastel (Total de Registros / Linhas) -->
+          <div class="pastel-card mint">
+            <div class="pastel-card-header">
+              <span>Total de Registros</span>
+              <span class="pastel-trend up">100% válidos</span>
+            </div>
+            <div class="pastel-card-body">
+              <div class="pastel-card-value" id="kpi-linhas">215.545</div>
+            </div>
+            <div class="pastel-card-footer">Escolas e entidades educacionais</div>
+          </div>
+
+          <!-- Card 3: Roxo Pastel (Total de Colunas / Variáveis) -->
+          <div class="pastel-card purple">
+            <div class="pastel-card-header">
+              <span>Total de Variáveis</span>
+              <span class="pastel-trend info">9 Prefixos</span>
+            </div>
+            <div class="pastel-card-body">
+              <div class="pastel-card-value" id="kpi-colunas">426</div>
+            </div>
+            <div class="pastel-card-footer">Campos levantados na pesquisa</div>
+          </div>
+
+          <!-- Card 4: Âmbar Pastel (Variáveis Quantitativas) -->
+          <div class="pastel-card amber">
+            <div class="pastel-card-header">
+              <span>Variáveis Quantitativas</span>
+              <span class="pastel-trend up" id="kpi-pct-quant">+36.38%</span>
+            </div>
+            <div class="pastel-card-body">
+              <div class="pastel-card-value" id="kpi-quantitativas">155</div>
+            </div>
+            <div class="pastel-card-footer">154 discretas (QT_) + 1 ano</div>
+          </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- ABA 1: PRIORIDADE 5 (IDENTIFICAÇÃO DO ARQUIVO)           -->
+        <!-- ========================================================= -->
+        <div id="tab-p5" class="tab-content active">
+          <div class="grid-2">
+            <!-- Metadados do Arquivo -->
+            <div class="content-card">
+              <div class="content-card-title">
+                <div>
+                  <h3>📄 Metadados Técnicos do Arquivo</h3>
+                  <p>Especificações do arquivo bruto de microdados fornecido pelo INEP</p>
+                </div>
+                <span class="badge-tag">Prioridade 5</span>
+              </div>
+              <div class="table-clean-wrap">
+                <table class="table-clean">
+                  <tbody>
+                    <tr>
+                      <td style="width: 200px;"><strong>Nome Exato do Arquivo:</strong></td>
+                      <td><code id="p5-nome">microdados_ed_basica_2024.csv</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Caminho Completo:</strong></td>
+                      <td><span id="p5-caminho"
+                          style="word-break: break-all; font-size: 0.78rem; color: var(--text-secondary);"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tamanho em Disco:</strong></td>
+                      <td><span id="p5-tamanho"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total de Linhas / Registros:</strong></td>
+                      <td><span id="p5-linhas"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total de Colunas / Variáveis:</strong></td>
+                      <td><span id="p5-colunas"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Delimitador de Campos:</strong></td>
+                      <td><span id="p5-delimitador"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Codificação de Caracteres:</strong></td>
+                      <td><span id="p5-encoding"></span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Instituição Coletora:</strong></td>
+                      <td>INEP - Ministério da Educação (MEC)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Certificação de Integridade MD5 -->
+            <div class="content-card">
+              <div class="content-card-title">
+                <div>
+                  <h3>🛡️ Certificação Criptográfica (Hash MD5)</h3>
+                  <p>Garantia matemática de que a base não sofreu adulteração ou corrupção</p>
+                </div>
+                <span class="badge-tag">Autenticidade</span>
+              </div>
+
+              <div
+                style="background: #f8fafc; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 14px;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-bottom: 4px;">HASH
+                  MD5 CALCULADO LOCALMENTE:</div>
+                <code id="p5-md5-calculado"
+                  style="font-size: 0.88rem; color: #047857; display: block; word-break: break-all; font-weight: 700;"></code>
+              </div>
+
+              <div
+                style="background: #f8fafc; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); margin-bottom: 16px;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-bottom: 4px;">HASH
+                  MD5 OFICIAL (PACOTE INEP):</div>
+                <code id="p5-md5-oficial"
+                  style="font-size: 0.88rem; color: #1d4ed8; display: block; word-break: break-all; font-weight: 700;"></code>
+              </div>
+
+              <div class="alert-box info" style="margin-bottom: 0;">
+                <div class="alert-icon">✅</div>
+                <div class="alert-content">
+                  <h4>Conclusão da Prioridade 5</h4>
+                  <p>O arquivo possui integridade criptográfica 100% comprovada pelo Hash MD5 oficial do INEP, estando
+                    integralmente autenticado para a pesquisa estatística.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- ABA 2: PRIORIDADE 2 (CONTAGEM DE VARIÁVEIS E PREFIXOS)   -->
+        <!-- ========================================================= -->
+        <div id="tab-p2" class="tab-content">
+          <div class="grid-2">
+            <!-- Gráfico de Rosca -->
+            <div class="content-card">
+              <div class="content-card-title">
+                <div>
+                  <h3>📊 Distribuição Proporcional por Prefixo</h3>
+                  <p>Proporção das 426 colunas classificadas pelo padrão oficial do INEP</p>
+                </div>
+                <span class="badge-tag">Rosca</span>
+              </div>
+              <div class="chart-box" style="height: 280px;">
+                <canvas id="chart-prefixos-donut"></canvas>
+              </div>
+            </div>
+
+            <!-- Gráfico de Barras -->
+            <div class="content-card">
+              <div class="content-card-title">
+                <div>
+                  <h3>📈 Quantidade Absoluta por Categoria</h3>
+                  <p>Volume total de campos levantados em cada eixo temático</p>
+                </div>
+                <span class="badge-tag">Barras</span>
+              </div>
+              <div class="chart-box" style="height: 280px;">
+                <canvas id="chart-prefixos-barras"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabela Detalhada de Prefixos -->
+          <div class="content-card">
+            <div class="content-card-title">
+              <div>
+                <h3>📑 Tabela de Classificação dos Prefixos Oficiais</h3>
+                <p>Mapeamento das 426 colunas segundo a taxonomia técnica do INEP</p>
+              </div>
+              <span class="badge-tag">Padrão INEP</span>
+            </div>
+            <div class="table-clean-wrap">
+              <table class="table-clean">
+                <thead>
+                  <tr>
+                    <th>Prefixo</th>
+                    <th>Classificação Estatística</th>
+                    <th>Quantidade</th>
+                    <th>Percentual (%)</th>
+                    <th>Descrição e Finalidade</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-prefixos-corpo"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Primeiras e Últimas 10 -->
+          <div class="grid-2">
+            <div class="content-card">
+              <div class="content-card-title">
+                <h3>Início da Base (Primeiras 10 Colunas)</h3>
+                <span class="badge-tag">Posições 1 a 10</span>
+              </div>
+              <div class="chip-grid" id="chips-primeiras-10"></div>
+            </div>
+
+            <div class="content-card">
+              <div class="content-card-title">
+                <h3>Final da Base (Últimas 10 Colunas)</h3>
+                <span class="badge-tag">Posições 417 a 426</span>
+              </div>
+              <div class="chip-grid" id="chips-ultimas-10"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- ABA 3: PRIORIDADE 3 (VARIÁVEIS QUANTITATIVAS & STATS)    -->
+        <!-- ========================================================= -->
+        <div id="tab-p3" class="tab-content">
+          <div class="alert-box info">
+            <div class="alert-icon">💡</div>
+            <div class="alert-content">
+              <h4>Definição Metodológica de Variáveis Quantitativas</h4>
+              <p>Variáveis quantitativas expressam quantidades numéricas reais sobre as quais operações aritméticas
+                (médias, somas, desvios-padrão) possuem sentido direto, como número de matrículas, professores, turmas e
+                salas. Identificadores como CNPJ, telefones e códigos de escola foram classificados como
+                cadastrais/nominais.</p>
+            </div>
+          </div>
+
+          <!-- BLOCO DE ESTATÍSTICA DESCRITIVA DAS VARIÁVEIS CENTRAIS -->
+          <div class="content-card" style="border: 1px solid #bfdbfe; box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);">
+            <div class="content-card-title">
+              <div>
+                <h3 style="color: #1e3a8a;">📐 Estatística Descritiva das Variáveis Quantitativas Centrais</h3>
+                <p>Métricas de tendência central, dispersão e distribuição das 3 variáveis fundamentais de ensino
+                  (179.286 escolas ativas)</p>
+              </div>
+              <span class="badge-tag" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
+                Média • Mediana • Desvio-Padrão
+              </span>
+            </div>
+
+            <!-- Cards Detalhados de QT_MAT_BAS, QT_DOC_BAS, QT_TUR_BAS -->
+            <div class="stats-cards-grid" id="stats-cards-quantitativas"></div>
+
+            <!-- Tabela Consolidada de Parâmetros Descritivos -->
+            <div style="margin-top: 24px;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 12px;">
+                📑 Tabela Consolidada de Parâmetros Descritivos
+              </h4>
+              <div class="table-clean-wrap">
+                <table class="table-clean">
+                  <thead>
+                    <tr>
+                      <th>Variável Central</th>
+                      <th>Escopo / Conceito</th>
+                      <th>N Válido</th>
+                      <th>Média (&mu;)</th>
+                      <th>Mediana (Md)</th>
+                      <th>Desvio-Padrão (&sigma;)</th>
+                      <th>CV (%)</th>
+                      <th>Mínimo</th>
+                      <th>1º Quartil (Q1)</th>
+                      <th>3º Quartil (Q3)</th>
+                      <th>Máximo</th>
+                      <th>Total Brasil (&Sigma;)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabela-stats-descritivas-corpo"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Gráfico Comparativo: Média vs Mediana vs Desvio Padrão -->
+            <div style="margin-top: 28px;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+                📊 Comparativo Visual: Média vs Mediana e Assimetria
+              </h4>
+              <p style="color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 14px;">
+                A distância entre a Média e a Mediana evidencia a assimetria positiva típica da educação brasileira,
+                onde megacolégios elevam a média aritmética.
+              </p>
+              <div class="chart-box" style="height: 320px;">
+                <canvas id="chart-comparativo-stats"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grupos Temáticos de Quantitativas -->
+          <div class="content-card">
+            <div class="content-card-title">
+              <div>
+                <h3>📚 Subgrupos das Variáveis Quantitativas</h3>
+                <p>Distribuição das 154 variáveis discretas de contagem por áreas de atuação</p>
+              </div>
+              <span class="badge-tag">4 Grupos</span>
+            </div>
+            <div class="kpi-cards-row" id="grupos-quantitativas-grid"
+              style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));"></div>
+          </div>
+
+          <!-- Resumo Comparativo e Lista Completa -->
+          <div class="grid-2">
+            <div class="content-card">
+              <div class="content-card-title">
+                <h3>⚖️ Resumo Comparativo: Natureza das Variáveis</h3>
+                <span class="badge-tag">Geral</span>
+              </div>
+              <div class="table-clean-wrap">
+                <table class="table-clean">
+                  <thead>
+                    <tr>
+                      <th>Categoria Estatística</th>
+                      <th>Colunas</th>
+                      <th>Proporção</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabela-categorias-corpo"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="content-card">
+              <div class="content-card-title">
+                <h3>📋 Todas as 154 Variáveis de Contagem (QT_)</h3>
+                <span class="badge-tag" id="badge-total-qt">154 Variáveis</span>
+              </div>
+              <div class="chip-grid" id="chips-todas-qt" style="max-height: 360px; overflow-y: auto;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- ABA 4: PRIORIDADE 4 (VALORES AUSENTES & BANDA LARGA)     -->
+        <!-- ========================================================= -->
+        <div id="tab-p4" class="tab-content">
+          <!-- Alerta de Aprovação Geral -->
+          <div class="alert-box">
+            <div class="alert-icon">🎯</div>
+            <div class="alert-content">
+              <h4>Requisito de Qualidade: 100% das Variáveis Centrais Aprovadas (&lt; 50% de Ausência)</h4>
+              <p>
+                Foram avaliadas <strong><span id="p4-total-analisadas">21</span> variáveis centrais</strong>
+                fundamentais da pesquisa.
+                Nenhuma ultrapassa o limite crítico de 50% de ausência. A maior taxa observada é de
+                <strong id="p4-maior-ausencia">22.63%</strong> em <code>IN_BANDA_LARGA</code>, e todas as variáveis
+                cadastrais/geográficas possuem <strong>0.00% de ausência</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- CALLOUT BOX ESPECIAL: CONFIRMAÇÃO DE IN_BANDA_LARGA (22,63%) -->
+          <div class="callout-banda-larga">
+            <div class="callout-banda-larga-header">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 26px;">🌐</span>
+                <div>
+                  <h3 style="font-size: 1.1rem; color: #1e3a8a; font-weight: 700;">
+                    Auditoria e Confirmação Oficial: IN_BANDA_LARGA
+                  </h3>
+                  <p style="color: #475569; font-size: 0.82rem;">
+                    Cálculo direto sobre a totalidade dos 215.545 registros da base oficial do Censo 2024
+                  </p>
+                </div>
+              </div>
+              <div class="callout-badge-confirmado">
+                ✓ 22,63% Confirmado no Relatório
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 16px;">
+              <div
+                style="background: #ffffff; padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #dbeafe;">
+                <div
+                  style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">
+                  Percentual Real de Ausência:
+                </div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: #d97706;">
+                  22,63% <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(48.774
+                    registros)</span>
+                </div>
+                <div class="bar-wrap" style="margin-top: 8px;">
+                  <div class="bar-bg" style="width: 100%;">
+                    <div class="bar-fill warning" style="width: 22.63%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="background: #ffffff; padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #dbeafe;">
+                <div
+                  style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">
+                  Registros Preenchidos / Válidos:
+                </div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: #059669;">
+                  77,37% <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(166.771
+                    registros)</span>
+                </div>
+                <div class="bar-wrap" style="margin-top: 8px;">
+                  <div class="bar-bg" style="width: 100%;">
+                    <div class="bar-fill" style="width: 77.37%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="font-size: 0.84rem; color: #1e293b; line-height: 1.55; background: #ffffff; padding: 14px 18px; border-radius: var(--radius-sm); border-left: 3px solid #2563eb;">
+              <strong>Esclarecimento Estatístico e Metodológico do Censo Escolar:</strong><br>
+              O percentual de <strong>22,63%</strong> reportado no relatório está <strong>100% CORRETO</strong>.
+              No questionário do INEP, o campo de banda larga só se aplica a escolas ativas que dispõem de
+              infraestrutura de conexão.<br>
+              As ausências correspondem à soma exata de:
+              <strong>(1)</strong> 36.259 escolas em situação paralisada ou extinta no ano de 2024 (16,82% da base
+              total); somadas a
+              <strong>(2)</strong> 12.515 escolas em atividade que declararam não possuir acesso à internet geral
+              (5,81%).<br>
+              Total acumulado: <code>16,82% + 5,81% = 22,63%</code>.<br>
+              <strong style="color: #059669;">Status do Critério:</strong> Como o limite de tolerância era de
+              <strong>50,00%</strong>, a variável está <strong>aprovada</strong> com margem de segurança de mais de 27
+              pontos percentuais.
+            </div>
+          </div>
+
+          <!-- Gráfico de Ausências com Linha de Corte -->
+          <div class="content-card">
+            <div class="content-card-title">
+              <div>
+                <h3>📊 Percentual de Ausência por Variável Central</h3>
+                <p>Comparação contra o limite de corte tolerado (&lt; 50%). Todas as 21 variáveis estão aprovadas.</p>
+              </div>
+              <span class="badge-tag">Corte &lt; 50%</span>
+            </div>
+            <div class="chart-box" style="height: 480px;">
+              <canvas id="chart-ausencias-barras"></canvas>
+            </div>
+          </div>
+
+          <!-- Tabela Completa das 21 Variáveis Centrais -->
+          <div class="content-card">
+            <div class="content-card-title">
+              <div>
+                <h3>📑 Tabela Completa de Completude das 21 Variáveis Centrais</h3>
+                <p>Avaliação detalhada dos 215.545 registros da base de dados</p>
+              </div>
+              <span class="badge-tag">21 Variáveis</span>
+            </div>
+            <div class="table-clean-wrap">
+              <table class="table-clean">
+                <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>Variável Central</th>
+                    <th>Eixo Temático</th>
+                    <th>Registros Preenchidos</th>
+                    <th>Total Ausentes</th>
+                    <th>Percentual Ausente (%)</th>
+                    <th>Status do Critério</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-ausencias-corpo"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- ABA 5: EXPLORADOR INTERATIVO DAS 426 VARIÁVEIS           -->
+        <!-- ========================================================= -->
+        <div id="tab-explorador" class="tab-content">
+          <div class="content-card">
+            <div class="content-card-title">
+              <div>
+                <h3>🔍 Consulta e Auditoria das 426 Variáveis</h3>
+                <p>Pesquisa instantânea por nome, prefixo ou classificação estatística com amostras reais</p>
+              </div>
+              <span class="badge-tag">Busca Dinâmica</span>
+            </div>
+
+            <!-- Filtros e Busca -->
+            <div class="search-bar-wrapper">
+              <div class="search-input-group">
+                <span>🔎</span>
+                <input type="text" id="input-busca-coluna"
+                  placeholder="Digite o nome da variável ou tipo (ex: QT_MAT, AGUA, DOC, UF)...">
+              </div>
+              <select id="select-filtro-prefixo" class="filter-select">
+                <option value="TODOS">Todos os Prefixos</option>
+                <option value="QT">QT_ - Quantitativas de Contagem</option>
+                <option value="IN">IN_ - Qualitativas Binárias (Dummies)</option>
+                <option value="CO">CO_ - Códigos de Identificação</option>
+                <option value="TP">TP_ - Tipos e Classificações</option>
+                <option value="NO">NO_ - Nomes Descritivos</option>
+                <option value="NU">NU_ - Cadastrais / Ano</option>
+                <option value="DS">DS_ - Descrições</option>
+                <option value="DT">DT_ - Datas</option>
+                <option value="SG">SG_ - Siglas</option>
+              </select>
+            </div>
+
+            <div class="table-clean-wrap">
+              <table class="table-clean">
+                <thead>
+                  <tr>
+                    <th style="width: 70px;">Posição</th>
+                    <th>Nome da Coluna</th>
+                    <th>Classificação Estatística</th>
+                    <th>Descrição do Prefixo</th>
+                    <th>Amostra de Valores Reais</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-explorador-corpo"></tbody>
+              </table>
+            </div>
+
+            <!-- Controles de Paginação -->
+            <div class="pagination-controls">
+              <div id="explorador-contador">Mostrando 1 a 15 de 426 variáveis</div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <button id="btn-prev-page" class="pagination-btn">← Anterior</button>
+                <span id="paginacao-info" style="font-weight: 600; color: var(--text-main);">Página 1</span>
+                <button id="btn-next-page" class="pagination-btn">Próxima →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- 3. PAINEL LATERAL DIREITO (Notifications & Insights Style da Referência) -->
+    <aside class="app-right-panel">
+      <!-- Seção: Notificações / Auditoria de Qualidade -->
+      <div class="right-section">
+        <div class="right-section-title">
+          <span>Auditoria de Qualidade</span>
+          <span class="count">3/3</span>
+        </div>
+        <div class="notification-list">
+          <div class="notification-item">
+            <div class="notification-icon green">🛡️</div>
+            <div class="notification-content">
+              <p>MD5 Oficial Validado</p>
+              <span>Integridade 100% autêntica</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon blue">🌐</div>
+            <div class="notification-content">
+              <p>IN_BANDA_LARGA: 22,63%</p>
+              <span>Confirmado no relatório (< 50%)</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon purple">🎯</div>
+            <div class="notification-content">
+              <p>21 Variáveis Centrais</p>
+              <span>Todas cumprem o critério</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção: Destaques Estatísticos -->
+      <div class="right-section">
+        <div class="right-section-title">
+          <span>Destaques da Base</span>
+          <span class="count">Brasil</span>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="activity-dot" style="background: #3b82f6;"></span>
+              <div>
+                <div class="activity-label">Matrículas Totais</div>
+                <div class="activity-sub">Educação Básica</div>
+              </div>
+            </div>
+            <div class="activity-value">47,08M</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="activity-dot" style="background: #10b981;"></span>
+              <div>
+                <div class="activity-label">Docentes Ativos</div>
+                <div class="activity-sub">Professores</div>
+              </div>
+            </div>
+            <div class="activity-value">2,93M</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="activity-dot" style="background: #8b5cf6;"></span>
+              <div>
+                <div class="activity-label">Turmas Regulares</div>
+                <div class="activity-sub">Em atividade</div>
+              </div>
+            </div>
+            <div class="activity-value">2,22M</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="activity-dot" style="background: #f59e0b;"></span>
+              <div>
+                <div class="activity-label">Escolas Ativas</div>
+                <div class="activity-sub">Censo 2024</div>
+              </div>
+            </div>
+            <div class="activity-value">179.286</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção: Distribuição de Prefixos Chave -->
+      <div class="right-section">
+        <div class="right-section-title">
+          <span>Prefixos mais Comuns</span>
+          <span class="count">Top 4</span>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="badge-pill badge-in">IN_</span>
+              <div>
+                <div class="activity-label">Indicadores (Dummies)</div>
+                <div class="activity-sub">51.64% da base</div>
+              </div>
+            </div>
+            <div class="activity-value">220</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="badge-pill badge-qt">QT_</span>
+              <div>
+                <div class="activity-label">Contagens Quantitativas</div>
+                <div class="activity-sub">36.15% da base</div>
+              </div>
+            </div>
+            <div class="activity-value">154</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="badge-pill badge-co">CO_</span>
+              <div>
+                <div class="activity-label">Códigos Identificadores</div>
+                <div class="activity-sub">3.76% da base</div>
+              </div>
+            </div>
+            <div class="activity-value">16</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-left">
+              <span class="badge-pill badge-tp">TP_</span>
+              <div>
+                <div class="activity-label">Tipos Administrativos</div>
+                <div class="activity-sub">3.52% da base</div>
+              </div>
+            </div>
+            <div class="activity-value">15</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Scripts: dados consolidados embutidos para execução sem falhas tanto offline quanto em servidor -->
+  <script src="dados_dashboard.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
